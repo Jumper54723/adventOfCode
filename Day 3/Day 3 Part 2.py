@@ -1,8 +1,10 @@
-file = open(r"C:\Users\danie\PycharmProjects\adventOfCode\Day 3 Puzzle Input.txt","r")
+file = open(r"/Day 3/Day 3 Example Text.txt", "r")
 
 characterString = file.read()
 maxIndex = len(characterString)
 mulSubstring = "mul("
+doSubstring = "do()"
+dontSubstring = "don't()"
 
 lastIndexFound = -1
 currentSum = 0
@@ -13,6 +15,28 @@ while True:
     if currentIndex == -1:
         break
     lastIndexFound = currentIndex
+
+    # Determine if do or don't
+    nearistDoIndex = -1
+    nearistDontIndex = -1
+    doIndex = characterString.find(doSubstring, nearistDoIndex+1)
+    dontIndex = characterString.find(dontSubstring, nearistDontIndex+1)
+    while doIndex < currentIndex or dontIndex < currentIndex and (nearistDoIndex != -1 and nearistDontIndex != -1):
+        doIndex = characterString.find(doSubstring, nearistDoIndex+1)
+        dontIndex = characterString.find(dontSubstring, nearistDontIndex+1)
+        if doIndex < currentIndex:
+
+            nearistDoIndex = doIndex
+        if dontIndex < currentIndex:
+            nearistDontIndex = dontIndex
+        if doIndex == -1 and dontIndex == -1:
+            break
+
+    if nearistDontIndex > nearistDoIndex:
+        continue
+
+    if nearistDontIndex != -1 and nearistDoIndex == -1:
+        continue
 
     # Get first number if valid
     firstNumber = ""

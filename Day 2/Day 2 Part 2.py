@@ -21,7 +21,7 @@ def testIfReportIsSafe(numbers):
 ########################################################################################################################
 
 
-file = open(r"C:\Users\danie\PycharmProjects\adventOfCode\Day 2 Puzzle Input.txt","r")
+file = open(r"/Day 2 Puzzle Input.txt", "r")
 
 numberOfSafeReports = 0
 for line in file:
