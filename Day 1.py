@@ -22,4 +22,4 @@ for num in list1:
     currentIndex += 1
 
 print(totalSum)
-
+file.close()

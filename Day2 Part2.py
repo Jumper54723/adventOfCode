@@ -41,3 +41,5 @@ for line in file:
         numberOfSafeReports += 1
 
 print(numberOfSafeReports)
+file.close()
+
