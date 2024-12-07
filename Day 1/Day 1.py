@@ -1,4 +1,4 @@
-file = open(r"/Day 1 Puzzle Input.txt", "r")
+file = open(r"C:\Users\danie\PycharmProjects\adventOfCode\Day 1\Day 1 Puzzle Input.txt", "r")
 
 
 list1 = list()

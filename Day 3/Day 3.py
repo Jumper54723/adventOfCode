@@ -1,4 +1,4 @@
-file = open(r"/Day 3/Day 3 Puzzle Input.txt", "r")
+file = open(r"C:\Users\danie\PycharmProjects\adventOfCode\Day 3\Day 3 Puzzle Input.txt", "r")
 
 characterString = file.read()
 maxIndex = len(characterString)
